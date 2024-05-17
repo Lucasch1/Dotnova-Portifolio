@@ -53,12 +53,12 @@ const projectsData = [
     },
     {
         id: 6,
-        title: "Full-stack Roadmap",
-        description: "Roadmap for becoming a full-stack developer",
+        title: "Landing pages",
+        description: "Personalized landing pages for companies and products",
         image: "/images/projects/6.png",
         tag: ["All", "Web"],
-        gitUrl: "https://github.com/DotNova",
-        previewUrl: "/",
+        gitUrl: "https://github.com/Lucasch1/Edits",
+        previewUrl: "https://edits-beryl.vercel.app/",
     },
 ];
 
