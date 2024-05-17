@@ -25,12 +25,13 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "E-commerce Application",
-        description: "E-commerce application with React and Firebase",
+        title: "Ticketing System with Blockchain",
+        description:
+            "Decentralized ticketing system with blockchain technology",
         image: "/images/projects/3.png",
         tag: ["All", "Web"],
-        gitUrl: "https://github.com/DotNova",
-        previewUrl: "/",
+        gitUrl: "https://github.com/PartyChainWeb3/",
+        previewUrl: "https://eventchain-two.vercel.app/",
     },
     {
         id: 4,
