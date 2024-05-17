@@ -17,7 +17,7 @@ const projectsData = [
     {
         id: 2,
         title: "Hardhat Testing Template",
-        description: "Project 2 description",
+        description: "A template for testing smart contracts with Hardhat",
         image: "/images/projects/2.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/DotNova",
@@ -26,7 +26,7 @@ const projectsData = [
     {
         id: 3,
         title: "E-commerce Application",
-        description: "Project 3 description",
+        description: "E-commerce application with React and Firebase",
         image: "/images/projects/3.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/DotNova",
@@ -35,7 +35,7 @@ const projectsData = [
     {
         id: 4,
         title: "Habits Improvement Application",
-        description: "Project 4 description",
+        description: "Mobile application for improving habits and productivity",
         image: "/images/projects/4.png",
         tag: ["All", "Mobile"],
         gitUrl: "https://github.com/DotNova",
@@ -53,7 +53,7 @@ const projectsData = [
     {
         id: 6,
         title: "Full-stack Roadmap",
-        description: "Project 5 description",
+        description: "Roadmap for becoming a full-stack developer",
         image: "/images/projects/6.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/DotNova",
