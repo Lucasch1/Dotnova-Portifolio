@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@react-email/render": "^0.0.13",
     "autoprefixer": "10.4.15",
     "encoding": "^0.1.13",
     "eslint": "8.47.0",
@@ -19,7 +20,7 @@
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-animated-numbers": "^0.16.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.3.1",
     "react-type-animation": "^3.1.0",
     "resend": "^1.0.0",
     "tailwindcss": "3.3.3"
