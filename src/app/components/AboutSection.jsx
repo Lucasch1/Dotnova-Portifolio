@@ -5,49 +5,52 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
     {
-        title: "Skills",
-        id: "skills",
+        title: "Web Development",
+        id: "Web Development",
         content: (
             <ul className="list-disc pl-2">
                 <li>Next.js</li>
-                <li>Solidity</li>
-                <li>PostgreSQL</li>
-                <li>Tailwind</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
+                <li>React</li>
             </ul>
         ),
     },
     {
-        title: "Education",
-        id: "education",
+        title: "Mobile Development",
+        id: "Mobile Development",
         content: (
             <ul className="list-disc pl-2">
-                <li>
-                    Ethereum and Solidity: The complete Developer’s Guide, Udemy
-                </li>
-                <li>
-                    JavaScript and TypeScript Course from Basic to Advanced,
-                    Udemy
-                </li>
-                <li>Federal University of ABC, São Paulo</li>
+                <li>Flutter (dart)</li>
+                <li>Firebase</li>
             </ul>
         ),
     },
     {
-        title: "Certifications",
-        id: "certifications",
+        title: "Diferentials",
+        id: "Diferentials",
         content: (
             <ul className="list-disc pl-2">
-                <li>AWS Cloud Practitioner</li>
-                <li>Google Professional Cloud Developer</li>
+                <li>Blockchain</li>
+                <li>Artificial Inteligence</li>
+            </ul>
+        ),
+    },
+    {
+        title: "Software Development",
+        id: "Software Development",
+        content: (
+            <ul className="list-disc pl-2">
+                <li>Goalang</li>
+                <li>RESTful APIs</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Firebase</li>
             </ul>
         ),
     },
 ];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("Web Development");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -71,39 +74,46 @@ const AboutSection = () => {
                         About Us
                     </h2>
                     <p className="text-base lg:text-lg">
-                        We are a software development company with expertise in
-                        web development, mobile app creation, blockchain
-                        integration, and traditional software engineering. We
-                        use a wide range of technologies to build interactive
-                        and responsive experiences. Our mobile developers are
-                        skilled in both native and cross-platform frameworks. We
-                        are pioneers in the blockchain space, leveraging our
-                        knowledge to create secure and decentralized
-                        applications. We are committed to continuous learning
-                        and collaboration, working seamlessly with clients to
-                        deliver tailored solutions that exceed expectations.
+                        In a dynamic world where technology evolves every day,
+                        many companies find themselves in a dilemma: obsolete
+                        and expensive software that can&apos;t keep up with the
+                        pace of change. Dotnova was born to solve this problem.
+                        We offer innovative and customized software solutions,
+                        using the most advanced technologies on the market to
+                        meet the needs of each client.
                     </p>
-                    <div className="flex flex-row justify-start mt-8">
+                    <div className="flex flex-row justify-start mt-8 overflow-x-auto">
                         <TabButton
-                            selectTab={() => handleTabChange("skills")}
-                            active={tab === "skills"}
+                            selectTab={() => handleTabChange("Diferentials")}
+                            active={tab === "Diferentials"}
                         >
                             {" "}
-                            Skills{" "}
+                            Diferentials{" "}
                         </TabButton>
                         <TabButton
-                            selectTab={() => handleTabChange("education")}
-                            active={tab === "education"}
+                            selectTab={() =>
+                                handleTabChange("Software Development")
+                            }
+                            active={tab === "Software Development"}
                         >
                             {" "}
-                            Education{" "}
+                            Software Development{" "}
                         </TabButton>
                         <TabButton
-                            selectTab={() => handleTabChange("certifications")}
-                            active={tab === "certifications"}
+                            selectTab={() => handleTabChange("Web Development")}
+                            active={tab === "Web Development"}
                         >
                             {" "}
-                            Certifications{" "}
+                            Web Development{" "}
+                        </TabButton>
+                        <TabButton
+                            selectTab={() =>
+                                handleTabChange("Mobile Development")
+                            }
+                            active={tab === "Mobile Development"}
+                        >
+                            {" "}
+                            Mobile Development{" "}
                         </TabButton>
                     </div>
                     <div className="mt-8">
