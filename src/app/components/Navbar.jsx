@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { FaBars } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const navLinks = [
     {
@@ -25,9 +26,33 @@ const navLinks = [
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!isOpen) {
+                const currentScrollPos = window.pageYOffset;
+                const scrollingUp = currentScrollPos < prevScrollPos;
+
+                setVisible(scrollingUp || currentScrollPos < 10);
+                setPrevScrollPos(currentScrollPos);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [prevScrollPos, isOpen]);
 
     return (
-        <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100">
+        <motion.nav
+            className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 rounded-b-2xl"
+            initial={false}
+            animate={{ y: visible ? 0 : "-100%" }}
+            transition={{ duration: 0.3 }}
+        >
             <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <Link href={"/"} className="">
                     <Image
@@ -66,7 +91,7 @@ const Navbar = () => {
                 </div>
             </div>
             {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-        </nav>
+        </motion.nav>
     );
 };
 
