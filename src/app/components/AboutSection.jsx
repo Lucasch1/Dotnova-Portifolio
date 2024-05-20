@@ -50,7 +50,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("Web Development");
+    const [tab, setTab] = useState("Diferentials");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {

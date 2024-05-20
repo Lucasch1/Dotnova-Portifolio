@@ -25,3 +25,38 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #121212;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+body::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #404040;
+  border-radius: 4px;
+}
+/* Estilizando a barra de rolagem */
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 6px;
+  background-color: #404040;
+}
+
+/* Estilizando o polegar da barra de rolagem */
+.overflow-y-scroll::-webkit-scrollbar-thumb {
+  background-color: #c936ff00;
+  border-radius: 4px;
+}
+
+/* Estilizando a barra de rolagem */
+.overflow-x-auto::-webkit-scrollbar {
+
+  height: 6px;
+  background-color: #40404000;
+}
+
+/* Estilizando o polegar da barra de rolagem */
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 4px;
+}
