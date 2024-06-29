@@ -39,7 +39,7 @@ const TAB_DATA = [
         id: "Software Development",
         content: (
             <ul className="list-disc pl-2">
-                <li>Goalang</li>
+                <li>GoLang</li>
                 <li>RESTful APIs</li>
                 <li>Python</li>
                 <li>SQL</li>
